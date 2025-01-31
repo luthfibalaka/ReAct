@@ -1,0 +1,4 @@
+openai==0.28
+gym==0.26.2
+numpy==2.2.2
+beautifulsoup4==4.12.3
