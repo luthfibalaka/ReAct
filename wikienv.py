@@ -8,7 +8,12 @@ from bs4 import BeautifulSoup
 # import wikipedia
 
 def clean_str(p):
-  return p.encode().decode("unicode-escape").encode("latin1").decode("utf-8")
+  return (
+    p.encode()
+    .decode("unicode-escape", errors="ignore")
+    .encode("latin1", errors="ignore")
+    .decode("utf-8", errors="ignore")
+  )
 
 
 class textSpace(gym.spaces.Space):
